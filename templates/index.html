@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fake News Detection Website</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css" />
+    <!-- Hover CSS -->
+    <link rel="stylesheet" href="css/hover-min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation Section Start -->
+    <header class="navbar">
+      <nav id="site-top-nav" class="navbar-menu navbar-fixed-top">
+        <div class="container">
+          <!-- logo -->
+          <div class="logo">
+            <a href="index.html" title="Logo">
+              <img src="img/logo.png" alt="Logo" class="img-responsive" />
+            </a>
+          </div>
+          <!-- Main Menu -->
+          <div class="menu text-right">
+            <ul>
+              <li>
+                <a class="hvr-underline-from-center" href="index.html">Home</a>
+              </li>
+              <li>
+                <a class="hvr-underline-from-center" href="services.html"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a class="hvr-underline-from-center" href="aboutus.html"
+                  >About Us</a
+                >
+              </li>
+
+              <li>
+                <a class="hvr-underline-from-center" href="login.html"
+                  >Registration</a
+                >
+              </li>
+              <li>
+                <a class="hvr-underline-from-center" href="website.html"
+                  >Animation
+                </a>
+              </li>
+              <li>
+                <button
+                  class="btn-detect"
+                  onclick="shakeButton(); openContactPage();"
+                >
+                  Contact
+                </button>
+
+                <script>
+                  function openContactPage() {
+                    window.location.href = "contact.html"; // Opens in the same tab
+                    // window.open("contact.html", "_blank"); // Uncomment to open in a new tab
+                  }
+                </script>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="news-detection text-center">
+      <video autoplay loop muted playsinline class="bg-video">
+        <source src="img/category-bg1.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="container">
+        <h2 class="heading">Fake News Detection</h2>
+        <button
+          class="btn-detect"
+          onclick="shakeButton(); window.open('http://localhost:8501', '_blank');"
+        >
+          Detect News
+        </button>
+      </div>
+    </section>
+
+    <style>
+      .news-detection {
+        position: relative;
+        overflow: hidden;
+        height: 50vh; /* Adjust height as needed */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+      .heading {
+        color: white;
+      }
+
+      .bg-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      .container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .btn-detect {
+        background: linear-gradient(45deg, #ff416c, #ff4b2b);
+        color: white;
+        font-size: 18px;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 15px rgba(255, 65, 108, 0.4);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn-detect:hover {
+        background: linear-gradient(45deg, #ff4b2b, #ff416c);
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(255, 65, 108, 0.6);
+      }
+
+      .btn-detect:active {
+        animation: shake 0.3s ease-in-out;
+      }
+
+      @keyframes shake {
+        0% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(-5px);
+        }
+        50% {
+          transform: translateX(5px);
+        }
+        75% {
+          transform: translateX(-5px);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+    </style>
+
+    <script>
+      function shakeButton() {
+        document.querySelector(".btn-detect").classList.add("shake");
+        setTimeout(() => {
+          document.querySelector(".btn-detect").classList.remove("shake");
+        }, 300);
+      }
+    </script>
+
+    <section class="categories">
+      <div class="container">
+        <h2 class="text-center">Fake News Facts</h2>
+        <div class="heading-border"></div>
+
+        <div class="grid-3">
+          <a href="#">
+            <div class="float-container">
+              <img src="img/category/p.jpg" class="img-responsive" alt="" />
+              <h3 class="float-text text-white">
+                Shocking Statistics on Fake News
+              </h3>
+            </div>
+          </a>
+          <a href="#">
+            <div class="float-container">
+              <img src="img/category/s.jpg" class="img-responsive" alt="" />
+              <h3 class="float-text text-white">Ways to Combat Fake News</h3>
+            </div>
+          </a>
+          <a href="#">
+            <div class="float-container">
+              <img src="img/category/b.jpg" class="img-responsive" alt="" />
+              <h3 class="float-text text-white">
+                Dangers & Consequences of Fake News
+              </h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="fake-menu">
+      <div class="container">
+        <h2 class="text-center">How Can We Fight</h2>
+        <div class="heading-border"></div>
+        <div class="grid-2">
+          <div class="fake-menu-box">
+            <form action="">
+              <div class="fake-menu-img"></div>
+              <div class="fake-menu-desc">
+                <input type="submit" class="btn-primary" value="Awareness" />
+              </div>
+            </form>
+          </div>
+          <div class="fake-menu-box">
+            <form action="">
+              <div class="fake-menu-img"></div>
+              <div class="fake-menu-desc">
+                <input
+                  type="submit"
+                  class="btn-primary"
+                  value="AI-powered detection"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="fake-menu-box">
+            <form action="">
+              <div class="fake-menu-img"></div>
+              <div class="fake-menu-desc">
+                <input
+                  type="submit"
+                  class="btn-primary"
+                  value="Critical Thinking"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="fake-menu-box">
+            <form action="">
+              <div class="fake-menu-img"></div>
+              <div class="fake-menu-desc">
+                <input
+                  type="submit"
+                  class="btn-primary"
+                  value="Stay critical"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="fake-menu-box">
+            <form action="">
+              <div class="fake-menu-img"></div>
+              <div class="fake-menu-desc">
+                <input
+                  type="submit"
+                  class="btn-primary"
+                  value="Stay informed"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="fake-menu-box">
+            <form action="">
+              <div class="fake-menu-img"></div>
+              <div class="fake-menu-desc">
+                <input
+                  type="submit"
+                  class="btn-primary"
+                  value="Stop fake news"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="container">
+        <div class="grid-3">
+          <div class="text-center">
+            <h3>About Us</h3>
+            <br />
+            <p>
+              In today’s digital age, misinformation and fake news have become a
+              significant challenge. Our Fake News Detection System is designed
+              to help individuals, journalists, and organizations verify the
+              authenticity of news articles, social media posts, and online
+              information.
+            </p>
+          </div>
+          <div class="texr-center">
+            <h3>Site Map</h3>
+            <br />
+            <div class="site-links">
+              <div class="site-links">
+                <a href="index.html">Home</a>
+
+                <a href="services.html">Services</a>
+
+                <a href="aboutus.html">About Us</a>
+
+                <a href="login.html">Registration</a>
+
+                <a href="website.html">Animation </a>
+              </div>
+            </div>
+          </div>
+          <div class="social-links">
+            <h3>Social Links</h3>
+            <br />
+            <div class="social">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="https://img.icons8.com/color/48/null/facebook-new.png"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="https://img.icons8.com/fluency/48/null/instagram-new.png"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="https://img.icons8.com/color/48/null/twitter--v1.png"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="https://img.icons8.com/color/48/null/linkedin-circled--v1.png"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="https://img.icons8.com/color/48/null/youtube-play.png"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section End -->
+
+    <!-- Copyright Section start -->
+    <section class="copyright">
+      <div class="container text-center">
+        <p class="copyright">
+          &copy; 2025<a href="#">Codewithus</a>. All Rights Reserved
+        </p>
+      </div>
+      <a id="back-to-top" class="btn-primary">
+        <i class="fa fa-angle-double-up"></i>
+      </a>
+    </section>
+    <!-- Copyright Section End -->
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!-- Jquery UI -->
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <!-- Custom JS -->
+    <script src="js/custom.js"></script>
+  </body>
+</html>

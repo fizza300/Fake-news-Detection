@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Query</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css" />
+    <!-- Hover CSS -->
+    <link rel="stylesheet" href="css/hover-min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/aboutus.css" />
+  </head>
+  <body>
+    <!-- Navigation Section Start -->
+    <header class="navbar">
+      <nav id="site-top-nav" class="navbar-menu navbar-fixed-top">
+        <div class="container">
+          <!-- logo -->
+          <div class="logo">
+            <a href="index.html" title="Logo">
+              <img src="img/logo.png" alt="Logo" class="img-responsive" />
+            </a>
+          </div>
+          <!-- Main Menu -->
+          <div class="menu text-right">
+            <ul>
+              <li>
+                <a class="hvr-underline-from-center" href="index.html">Home</a>
+              </li>
+              <li>
+                <a class="hvr-underline-from-center" href="services.html"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a class="hvr-underline-from-center" href="aboutus.html"
+                  >About Us</a
+                >
+              </li>
+
+              <li>
+                <a class="hvr-underline-from-center" href="login.html"
+                  >Registration</a
+                >
+              </li>
+              <li>
+                <a class="hvr-underline-from-center" href="website.html"
+                  >Animation
+                </a>
+              </li>
+              <li>
+                <button
+                  class="btn-detect"
+                  onclick="shakeButton(); openContactPage();"
+                >
+                  Contact
+                </button>
+
+                <script>
+                  function openContactPage() {
+                    window.location.href = "contact.html"; // Opens in the same tab
+                    // window.open("contact.html", "_blank"); // Uncomment to open in a new tab
+                  }
+                </script>
+
+                <style>
+                  /* About Us Box */
+                  .about-box {
+                    background: rgba(255, 255, 255, 0.9);
+                    padding: 50px;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                    animation: fadeIn 1.5s ease-in-out;
+                    width: 80%;
+                    max-width: 800px;
+                    margin: auto; /* Centers the box */
+                    text-align: left; /* Aligns text and headings to the left */
+                    position: relative;
+                  }
+
+                  .about-box img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 10px;
+                    margin-bottom: 20px;
+                    display: block;
+                  }
+
+                  .about-box {
+                    background: rgba(255, 255, 255, 0.9);
+                    padding: 50px;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                    animation: fadeIn 1.5s ease-in-out;
+                    width: 80%;
+                    max-width: 800px;
+                    margin: auto; /* Centers the box */
+                    text-align: left; /* Aligns text and headings to the left */
+                  }
+                  .about-box::before {
+                    content: "";
+                    background: url("img/background.jpg") no-repeat center
+                      center/cover;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                    opacity: 0.3; /* White overlay effect */
+                    z-index: 0;
+                  }
+
+                  .about-box h1 {
+                    font-size: 26px;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    text-align: left;
+                  }
+                  .about-box h3 {
+                    font-size: 26px;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    text-align: left;
+                  }
+
+                  .about-box p {
+                    font-size: 18px;
+                    line-height: 1.6;
+                    text-align: left;
+                  }
+
+                  .about-box::before {
+                    content: "";
+                    background: url("img/background.jpg") no-repeat center
+                      center/cover;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                    opacity: 0.3; /* White overlay effect */
+                    z-index: 0;
+                  }
+
+                  .about-box p {
+                    position: relative;
+                    z-index: 1;
+                    color: black;
+                    text-align: left;
+                    font-weight: bold;
+                  }
+
+                  /* Fade-in Animation */
+                  @keyframes fadeIn {
+                    from {
+                      opacity: 0;
+                      transform: translateY(20px);
+                    }
+                    to {
+                      opacity: 1;
+                      transform: translateY(0);
+                    }
+                  }
+                  .btn-detect {
+                    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+                    color: white;
+                    font-size: 18px;
+                    padding: 12px 24px;
+                    border: none;
+                    border-radius: 50px;
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+                    box-shadow: 0 4px 15px rgba(255, 65, 108, 0.4);
+                    position: relative;
+                    overflow: hidden;
+                  }
+
+                  .btn-detect:hover {
+                    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+                    transform: scale(1.1);
+                    box-shadow: 0 6px 20px rgba(255, 65, 108, 0.6);
+                  }
+
+                  .btn-detect:active {
+                    animation: shake 0.3s ease-in-out;
+                  }
+
+                  @keyframes shake {
+                    0% {
+                      transform: translateX(0);
+                    }
+                    25% {
+                      transform: translateX(-5px);
+                    }
+                    50% {
+                      transform: translateX(5px);
+                    }
+                    75% {
+                      transform: translateX(-5px);
+                    }
+                    100% {
+                      transform: translateX(0);
+                    }
+                  }
+                </style>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Navigation Section End -->
+
+    <!-- Contact Section Start -->
+    <section class="contact">
+      <div class="container">
+        <h2 class="text-center">About Us</h2>
+        <div class="heading-border"></div>
+
+        <div class="about-box">
+          <h3 class="text-center">About Us</h3>
+
+          <p>
+            In todays digital age, misinformation and fake news have become a
+            significant challenge, spreading rapidly across social media, online
+            platforms, and even mainstream news channels. The ease of content
+            creation and sharing has made it increasingly difficult to
+            differentiate between authentic and fabricated information. This
+            growing issue not only misleads individuals but also influences
+            public opinion, disrupts societies, and affects critical
+            decision-making.
+          </p>
+
+          <p>
+            To combat this, we have developed a Fake News Detection System, an
+            advanced AI-driven solution designed to help individuals,
+            journalists, researchers, and organizations verify the authenticity
+            of news articles, social media posts, and online information.
+          </p>
+          <br />
+
+          <h3 class="text-center">Our Approach</h3>
+          <p>
+            Using cutting-edge Artificial Intelligence (AI), Machine Learning
+            (ML), and Natural Language Processing (NLP), our system performs
+            in-depth analysis of content patterns, sources, language structure,
+            and credibility indicators. It assesses the reliability of
+            information by checking factual consistency, cross-referencing
+            multiple sources, and detecting manipulative content strategies.
+          </p>
+          <br />
+
+          <h3 class="text-center">Our Commitment</h3>
+
+          <p>
+            We are committed to fostering a responsible, informed, and secure
+            digital ecosystem by providing a reliable, efficient, and
+            user-friendly platform. Our goal is to empower users with tools that
+            allow them to make informed decisions, distinguish between real and
+            fake news, and contribute to a more truthful online environment.
+          </p>
+          <p>
+            By leveraging advanced technology and ethical AI practices, we aim
+            to reduce misinformation, protect democratic values, and promote
+            transparency in media consumption.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="container">
+        <div class="grid-3">
+          <div class="text-center">
+            <h3>About Us</h3>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+              officia, temporibus expedita dicta eligendi harum architecto
+              fugiat sint, laudantium omnis animi. Voluptas praesentium maiores
+              minima pariatur necessitatibus consequuntur, similique assumenda.
+            </p>
+          </div>
+          <div class="texr-center">
+            <h3>Site Map</h3>
+            <br />
+            <div class="site-links">
+              <a href="index.html">Home</a>
+
+              <a href="services.html">Services</a>
+
+              <a href="aboutus.html">About Us</a>
+
+              <a href="login.html">Registration</a>
+
+              <a href="website.html">Animation </a>
+            </div>
+          </div>
+          <div class="social-links">
+            <h3>Social Links</h3>
+            <br />
+            <div class="social">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="https://img.icons8.com/color/48/null/facebook-new.png"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="https://img.icons8.com/fluency/48/null/instagram-new.png"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="https://img.icons8.com/color/48/null/twitter--v1.png"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="https://img.icons8.com/color/48/null/linkedin-circled--v1.png"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="https://img.icons8.com/color/48/null/youtube-play.png"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section End -->
+
+    <!-- Copyright Section start -->
+    <section class="copyright">
+      <div class="container text-center">
+        <p class="copyright">
+          &copy; 2025<a href="#">Codewithus</a>. All Rights Reserved
+        </p>
+      </div>
+      <a id="back-to-top" class="btn-primary">
+        <i class="fa fa-angle-double-up"></i>
+      </a>
+    </section>
+    <!-- Copyright Section End -->
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!-- Jquery UI -->
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <!-- Custom JS -->
+    <script src="js/custom.js"></script>
+  </body>
+</html>
